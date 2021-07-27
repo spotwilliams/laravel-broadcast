@@ -18,6 +18,12 @@
                                 <breeze-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </breeze-nav-link>
+                                <breeze-nav-link :href="route('index_note')" :active="route().current('index_note')">
+                                    My notes
+                                </breeze-nav-link>
+                                <breeze-nav-link :href="route('index_note')" :active="route().current('create_note')">
+                                    Create a note
+                                </breeze-nav-link>
                             </div>
                         </div>
 
