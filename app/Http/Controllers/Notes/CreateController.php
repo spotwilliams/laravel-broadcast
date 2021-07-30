@@ -6,12 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Models\Note;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
+use Inertia\Inertia;
 
 class CreateController extends Controller
 {
     public function create()
     {
-        return view('notes.create');
+        return Inertia::render('Notes/Create');
     }
 
     public function store(Request $request)
@@ -28,6 +29,6 @@ class CreateController extends Controller
             'body' => $request->body
         ]);
 
-        return redirect('/');
+        return redirect(route('index_note'));
     }
 }
